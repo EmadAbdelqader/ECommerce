@@ -13,19 +13,16 @@ namespace ECS.DataAccess
     /// </summary>
     public class User : BaseEntity
     {
-        [Required]
         [MaxLength(30)]
         public string FirstName { get; set; }
-        [Required]
         [MaxLength(30)]
         public string LastName { get; set; }
-        [Required]
         [MaxLength(60)]
         public string Email { get; set; }
         [MaxLength(12)]
-        public string Password { get; set; }
-        public int Type { get; set; }
-        public int Status { get; set; }
-        public bool IsDeleted { get; set; }
+        public string? Password { get; set; }
+        public int? Type { get; set; }
+        public int? Status { get; set; }
+        public bool? IsDeleted { get; set; }
     }
 }

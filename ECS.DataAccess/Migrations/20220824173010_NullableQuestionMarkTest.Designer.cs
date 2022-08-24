@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ECS.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220814114832_Initial")]
-    partial class Initial
+    [Migration("20220824173010_NullableQuestionMarkTest")]
+    partial class NullableQuestionMarkTest
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,13 +39,18 @@ namespace ECS.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
@@ -75,6 +80,7 @@ namespace ECS.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -198,6 +204,7 @@ namespace ECS.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(120)
                         .HasColumnType("nvarchar(120)");
 

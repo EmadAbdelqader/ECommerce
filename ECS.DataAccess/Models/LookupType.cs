@@ -9,10 +9,9 @@ namespace ECS.DataAccess
 {
     public class LookupType : BaseEntity
     {
-        [Required]
         [MaxLength(50)]
         public string TypeName { get; set; }
-        public bool IsActive { get; set; }
+        public bool? IsActive { get; set; }
         public List<Lookup> Lookups { get; set; } = new List<Lookup>();
 
     }

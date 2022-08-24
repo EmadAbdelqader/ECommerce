@@ -4,6 +4,7 @@ using ECS.DataAccess.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ECS.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220824173448_NullableLastTest")]
+    partial class NullableLastTest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,10 +53,10 @@ namespace ECS.DataAccess.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -97,10 +99,10 @@ namespace ECS.DataAccess.Migrations
                     b.Property<int>("Type")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -136,10 +138,10 @@ namespace ECS.DataAccess.Migrations
                     b.Property<int>("LookupTypeId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -171,10 +173,10 @@ namespace ECS.DataAccess.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -220,10 +222,10 @@ namespace ECS.DataAccess.Migrations
                     b.Property<int?>("Status")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -275,10 +277,10 @@ namespace ECS.DataAccess.Migrations
                     b.Property<int?>("Type")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");

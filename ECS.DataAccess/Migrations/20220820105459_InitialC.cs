@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ECS.DataAccess.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialC : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,6 +18,7 @@ namespace ECS.DataAccess.Migrations
                     Name = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
                     Description = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),

@@ -11,10 +11,9 @@ namespace ECS.DataAccess
     {
         public int LookupTypeId { get; set; }
 
-        [Required]
         [MaxLength(50)]
         public string LookupDescription { get; set; }
-        public bool IsActive { get; set; }
-        public bool CanDelete { get; set; }
+        public bool? IsActive { get; set; }
+        public bool? CanDelete { get; set; }
     }
 }

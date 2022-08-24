@@ -4,6 +4,7 @@ using ECS.DataAccess.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ECS.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220820105459_InitialC")]
+    partial class InitialC
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,18 +45,17 @@ namespace ECS.DataAccess.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsDeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -80,7 +81,7 @@ namespace ECS.DataAccess.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<bool?>("IsDeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<int>("Module")
@@ -97,10 +98,10 @@ namespace ECS.DataAccess.Migrations
                     b.Property<int>("Type")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -116,7 +117,7 @@ namespace ECS.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<bool?>("CanDelete")
+                    b.Property<bool>("CanDelete")
                         .HasColumnType("bit");
 
                     b.Property<int>("CreatedBy")
@@ -125,7 +126,7 @@ namespace ECS.DataAccess.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool?>("IsActive")
+                    b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
                     b.Property<string>("LookupDescription")
@@ -136,10 +137,10 @@ namespace ECS.DataAccess.Migrations
                     b.Property<int>("LookupTypeId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -163,7 +164,7 @@ namespace ECS.DataAccess.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool?>("IsActive")
+                    b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
                     b.Property<string>("TypeName")
@@ -171,10 +172,10 @@ namespace ECS.DataAccess.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -203,7 +204,7 @@ namespace ECS.DataAccess.Migrations
                         .HasMaxLength(120)
                         .HasColumnType("nvarchar(120)");
 
-                    b.Property<bool?>("IsDeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -211,19 +212,19 @@ namespace ECS.DataAccess.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<int?>("Price")
+                    b.Property<int>("Price")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Status")
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -257,7 +258,7 @@ namespace ECS.DataAccess.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<bool?>("IsDeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("LastName")
@@ -269,16 +270,16 @@ namespace ECS.DataAccess.Migrations
                         .HasMaxLength(12)
                         .HasColumnType("nvarchar(12)");
 
-                    b.Property<int?>("Status")
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Type")
+                    b.Property<int>("Type")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UpdatedBy")
+                    b.Property<int>("UpdatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");

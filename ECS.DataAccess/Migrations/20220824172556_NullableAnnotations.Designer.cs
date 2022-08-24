@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ECS.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220817175006_EditCategory")]
-    partial class EditCategory
+    [Migration("20220824172556_NullableAnnotations")]
+    partial class NullableAnnotations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,6 +39,7 @@ namespace ECS.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -49,6 +50,7 @@ namespace ECS.DataAccess.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
@@ -78,6 +80,7 @@ namespace ECS.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -201,6 +204,7 @@ namespace ECS.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(120)
                         .HasColumnType("nvarchar(120)");
 
@@ -267,6 +271,7 @@ namespace ECS.DataAccess.Migrations
                         .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Password")
+                        .IsRequired()
                         .HasMaxLength(12)
                         .HasColumnType("nvarchar(12)");
 

@@ -11,15 +11,13 @@ namespace ECS.DataAccess
     {
         public int CategoryId { get; set; }
 
-        [Required]
         [MaxLength(30)]
         public string Name { get; set; }
         [MaxLength(120)]
-        public string Description { get; set; }
-        [Required]
+        public string? Description { get; set; }
         public int Quantity { get; set; }
-        public int Price { get; set; }
-        public int Status { get; set; }
-        public bool IsDeleted { get; set; }
+        public int? Price { get; set; }
+        public int? Status { get; set; }
+        public bool? IsDeleted { get; set; }
     }
 }

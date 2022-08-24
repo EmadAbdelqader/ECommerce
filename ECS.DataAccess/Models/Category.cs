@@ -9,12 +9,11 @@ namespace ECS.DataAccess
         public string Name { get; set; }
 
         [MaxLength(50)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
-        [Required]
         public bool IsActive { get; set; }
 
-        public bool IsDeleted { get; set; }
+        public bool? IsDeleted { get; set; }
 
         public List<Product> Products { get; set; } = new List<Product>();
     }

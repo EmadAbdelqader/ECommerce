@@ -13,11 +13,13 @@ namespace ECS.Business
 
         List<User> GetAll();
 
-        string GetUserName();
+        List<FullNameVM> GetFullNames();
 
         int Save(User user);
 
         int Update(User user);
+
+        void Delete(User user);
 
         void Delete(int userId);
     }
